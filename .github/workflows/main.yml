@@ -4,7 +4,7 @@ env:
   kernel_repository: https://github.com/wahkxk/android_kernel_lge_sdm845.git
   kernel_branch: lineage-22.1
   device: judypn
-  clang_version: r487747c
+  clang_version: r365631c
   defconfig: |
     lineageos_judypn_defconfig
   kernel_patch: |
