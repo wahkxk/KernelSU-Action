@@ -1,12 +1,12 @@
 name: Check and Build
 
 env:
-  kernel_repository: PixelExperience-Devices/kernel_xiaomi_sdm845
-  kernel_branch: fourteen
-  device: dipper
+  kernel_repository: https://github.com/wahkxk/android_kernel_lge_sdm845.git
+  kernel_branch: lineage-22.1
+  device: judypn
   clang_version: r487747c
   defconfig: |
-    dipper_defconfig
+    lineageos_judypn_defconfig
   kernel_patch: |
     backport-path-umount.patch
   kernelsu_patch: |
