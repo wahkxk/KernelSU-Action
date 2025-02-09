@@ -1,12 +1,12 @@
 name: Check and Build
 
 env:
-  kernel_repository: https://github.com/wahkxk/android_kernel_lge_sdm845.git
-  kernel_branch: lineage-22.1
-  device: judypn
+  kernel_repository: https://bgithub.xyz/wahkxk/kernel_xiaomi_pissarro.git
+  kernel_branch: lineage-21
+  device: pissarro
   clang_version: r365631c
   defconfig: |
-    lineageos_judypn_defconfig
+    pissarro_user_defconfig
   kernel_patch: |
     backport-path-umount.patch
   kernelsu_patch: |
@@ -97,7 +97,7 @@ jobs:
       - name: Setup KernelSU
         run: |
           # https://kernelsu.org/zh_CN/guide/how-to-integrate-for-non-gki.html
-          curl -L https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh | bash -s -- $kernelsu_remote_version
+          curl -L https://raw.bgithub.xyz/tiann/KernelSU/main/kernel/setup.sh | bash -s -- $kernelsu_remote_version
           echo 'CONFIG_KPROBES=y' >>arch/arm64/configs/merged_defconfig
           echo 'CONFIG_HAVE_KPROBES=y' >>arch/arm64/configs/merged_defconfig
           echo 'CONFIG_KPROBE_EVENTS=y' >>arch/arm64/configs/merged_defconfig
